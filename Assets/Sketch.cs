@@ -6,7 +6,7 @@ public class Sketch : MonoBehaviour {
 
 	public GameObject myPrefab;
 
-	void Start () {
+	 void Start () {
 
 		int totalCubes = 30;
 
@@ -16,7 +16,7 @@ public class Sketch : MonoBehaviour {
 		{
 			float perc = i / (float)totalCubes;
 			float sin = Mathf.Sin(perc * Mathf.PI/2);
-
+           
 			float x = 1.8f + sin * totalDistance;
 			float y = 5.0f;
 			float z = 0.0f;
@@ -25,8 +25,8 @@ public class Sketch : MonoBehaviour {
 
 			newCube.GetComponent<myCubeScript>().SetSize(.45f * (1.0f - perc));
 			newCube.GetComponent<myCubeScript>().rotateSpeed = .2f + perc * 4.0f;
-		}
-
+            newCube.GetComponent<myCubeScript>().SetI(i);
+        }
 	}
 
 	void Update () {

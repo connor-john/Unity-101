@@ -18,8 +18,8 @@ public class Sketch : MonoBehaviour {
 			float sin = Mathf.Sin(perc * Mathf.PI/2);
            
 			float x = 1.8f + sin * totalDistance;
-			float y = 5.0f;
-			float z = 0.0f;
+            float y = Random.Range(0f, 10.0f);
+            float z = Random.Range(-3f, 8f);
 
 			var newCube = (GameObject)Instantiate(myPrefab, new Vector3(x, y, z), Quaternion.identity);
 
